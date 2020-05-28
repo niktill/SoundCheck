@@ -42,7 +42,6 @@ Original School Project Git Repo https://github.com/csc309-winter-2019/team29
 
 #### HOW TO USE
 
-------
 
 ###### Regular USER
 
