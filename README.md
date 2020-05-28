@@ -2,6 +2,8 @@
 
 SOUNDCHECK (https://dry-island-15572.herokuapp.com)
 
+Original School Project Git Repo https://github.com/csc309-winter-2019/team29
+
 #### Overview of routes
 
 ------
