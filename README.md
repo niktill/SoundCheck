@@ -1,4 +1,4 @@
-## team29
+## SoundCheck
 
 SOUNDCHECK (https://dry-island-15572.herokuapp.com)
 
