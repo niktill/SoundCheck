@@ -2,6 +2,8 @@
 
 SOUNDCHECK (https://dry-island-15572.herokuapp.com)
 
+Original School Project Git Repo https://github.com/csc309-winter-2019/team29
+
 #### Overview of routes
 
 ------
@@ -40,7 +42,6 @@ SOUNDCHECK (https://dry-island-15572.herokuapp.com)
 
 #### HOW TO USE
 
-------
 
 ###### Regular USER
 
@@ -97,7 +98,7 @@ On the home page as an admin they can view featured artists and remove them by c
 can also view the most checked artists as well on their home page. On the navagation bar at the top are links 
 to the admin search page, the admin page and a log out button.
 
---------- Admin Search Page --------
+###### Admin Search Page
 On the admin search page an admin they can use the search bar to find artists by name. As this uses the Spotify API, 
 inserting a correct artist name is required. There are also links to the admin page and 
 a log out button as well.
