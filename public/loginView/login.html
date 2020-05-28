@@ -23,9 +23,9 @@
                 <div class="form-group">
                     <input type="password" name="passwordLogIn" id="passwordLogIn" class="form-control lg" placeholder="password" required> 
                 </div>
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-sm-6">
-                        <input type="submit" id="signInButton" class="myButton" value="Sign In">
+                        <input type="submit" id="signInButton" class="btn btn-primary myButton" value="Sign In">
                     </div>
                     <div class="col-sm-6">
                         <button id="createAccountLink" type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">
@@ -59,8 +59,8 @@
                             <div class="form-group">
                                     <input type="password" name="confirmPassword" id="confirmPassword" class="form-control lg" placeholder="confirm password" required>
                             </div>
-                            <input class="myButton" id="createAccountButton" type="submit" value="Create Account">
-                            <ul>
+                            <input class="myButton btn btn-primary" id="createAccountButton" type="submit" value="Create Account">
+                            <ul id="login-requirements">
                                 <li> username must be unique </li>
                                 <li> password length must be at least 4 </li>
                             </ul>
