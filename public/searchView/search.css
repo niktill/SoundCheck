@@ -1,0 +1,299 @@
+body {
+    background-image: url('../img/headphones.jpg');
+    background-position: center;
+}
+
+/*a {
+    text-decoration: none;
+}*/
+
+h2 {
+    color: #7A9E9F;
+    margin-left: 4%;
+    margin-bottom: 20px;
+}
+
+.navbar {
+    background-color: #fdf1e3 !important;
+}
+
+#header {
+    padding: 25px;
+    width: 100%;
+    margin: 20px;
+    height: 100px;
+}
+
+#SearchResult{
+    width: 100%;
+    margin-top: 20px;
+}
+
+#logo {
+    margin-right: 10px;
+    color: #7A9E9F;
+
+}
+#logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.searchBar {
+    border: solid #B8D8D8 4px;
+    border-radius: 20px;
+    padding: 10px;
+    outline: none !important;
+    width: 500px;
+    font-size: 20px;
+}
+
+.searchBar:focus {
+    border: solid #7A9E9F 4px;
+}
+
+.header-button {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    color: #4F6367;
+    background-color: #B8D8D8;
+    outline: none !important;
+    font-weight: bold;
+    height: 50px;
+    width: 140px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+.user-button {
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    border: none;
+    border-radius: 50%;
+    color: #4F6367;
+    background-color: #B8D8D8;
+}
+
+.user-button:hover {
+    color: #B8D8D8;
+    border: none;
+    background-color: #7A9E9F;
+    transition: 0.3s;
+}
+#admin-button {
+    margin-left: 10px;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    border: none;
+    border-radius: 50%;
+    color: #4F6367;
+    background-color: #B8D8D8;
+}
+
+#admin-button:hover {
+    color: #B8D8D8;
+    border: none;
+    background-color: #7A9E9F;
+    transition: 0.3s;
+}
+
+.search-container{
+    margin-right: 200px;
+}
+
+.search-container button {
+    margin-left: 10px;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: #B8D8D8;
+    outline: none !important;
+}
+
+.search-container button:hover, #randomSearch:hover {
+    color: #4F6367;
+    transform: scale(1.5)
+}
+
+#randomSearch {
+    position: relative;
+    top: 15px;
+}
+
+
+.header-button:hover {
+    color: #B8D8D8;
+    border: none;
+    border-radius: 20px;
+    background-color: #7A9E9F;
+    transition: 0.3s;
+}
+
+#logout-button {
+    margin-left: 10px;
+    padding: 10px;
+    height: 50px;
+    width: 100px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    color: #4F6367;
+    background-color: #B8D8D8;
+}
+
+#logout-button:hover {
+    color: #B8D8D8;
+    border: none;
+    background-color: #7A9E9F;
+    transition: 0.3s;
+}
+
+.photoStack {
+    display: flex;
+    width: 100%;
+}
+
+.card {
+    display: inline-block;
+    width: 250px;
+    margin: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    border-radius: 20px;
+    transition: .5s;
+    height: 517px
+}
+
+.card:hover {
+    transform: scale(1.2)
+}
+
+.card-body {
+ text-align: center;
+ padding: 10px 0;
+ margin-top:10px;
+}
+
+.card-body h4 {
+    margin: 5px;
+    color: #4F6367;
+    height: 50px
+}
+.card img {
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width: 80%;
+    height: 85%;
+}
+
+.spotifyLink {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    color: #4F6367;
+    background-color: #B8D8D8;
+    outline: none !important;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.spotifyLink:hover {
+    color: #B8D8D8;
+    border: none;
+    border-radius: 20px;
+    background-color: #7A9E9F;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.card h5 {
+    color: #FE5F55;
+    margin: 10px;
+
+}
+
+.feature {
+    background-color: lightblue;
+    padding: 5px;
+    border-radius: 5px;
+    min-width: 110px;
+}
+
+/* .genre{
+    background-color: lightblue;
+    border-radius: 5px;
+    min-height: 50px;
+    max-width: 110px;
+} */
+
+
+.checkButton {
+    background: transparent;
+    border: none;
+    right: 10px;
+    color: #A8A9A9;
+}
+
+.checkButton:focus {
+    outline: 0;
+}
+
+/*.checkIcon {
+    font-size: 5em;
+}*/
+
+.checkButton i{
+    position: relative;
+    top: 15px;
+    font-size: 80px;
+}
+
+.middle {
+    transition: 1s ease;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    position: relative;
+    top: -50%;
+    left: 50%;
+    width: 100%;
+}
+
+.middlered {
+    transition: 1s ease;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    position: relative;
+    top: -50%;
+    left: 50%;
+    width: 100%;
+}
+
+.container{
+    height: 200px;
+}
+
+.container:hover .image {
+    opacity: 0.6;
+    transform: scale(1.1)
+}
+
+.container:hover .middle {
+    opacity: 1;
+}
+
+.red{
+    color: #FE5F55;
+}

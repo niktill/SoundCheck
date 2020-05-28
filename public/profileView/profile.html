@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="eng">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../homeView/home.css">
+		<link rel="stylesheet" href="profile.css">
+
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	    <title>Soundcheck | Profile</title>
+	</head>
+
+	<body>
+	    <nav class="navbar navbar-expand-sm">
+            <h1 id="logo"><a href="/homeView/home.html">SoundCheck</a></h1>
+			<button class="search-button" onclick="window.location.href='/search'">Search for Artists</button>
+
+            <!-- <div class="search-container">
+                <input type="text" name="artist" placeholder="Search Artist" class="searchBar">
+                <a href="/searchView/search.html">
+                    <button id="search" type="submit"><i class="fa fa-search"></i></button>
+                </a>
+                
+            </div> -->
+            <div class="float-right">
+                <a href="">
+                    <button class="user-button"><i class="fa fa-user"></i></button>
+				</a>
+				<button id="logout-button" onclick='window.location = "/users/logout"'>Sign Out</button>
+            </div>
+    	</nav>
+
+		<div class="d-flex flex-row justify-content-center">
+
+
+		<div class="container profileContainer p-4">
+		  	<h2 id="profile-header">Profile</h2>
+		  	<button class="button" onclick="editProfile(this)">
+				<i class="fa fa-pencil edit-profile-icon" aria-hidden="true"></i>
+			</button>
+		  	<div class="d-flex flex-row">
+
+		  		<div class="container profilePictureContainer">
+					<img id="profilePicture" class="image noHover" src="../img/profile.png">
+
+				</div>
+				<div class="profileNameContainer">
+					<h2 id="username"></h2>
+<!-- 					<button class="button edit-profile-button" onclick="editProfile(this)">
+						<i class="fa fa-pencil edit-profile-icon" aria-hidden="true"></i>
+					</button> -->
+					<input type="password" id="new-password" class="username-input password-input" placeholder="Enter your new password here">
+					<input type="password" id="confirm-new-password" class="username-input password-input" placeholder="Confirm your new password">
+					<button class="button save-button" onclick="saveProfile()">
+						<i class="fa fa-check-square save-icon" aria-hidden="true"></i>
+						
+					</button>
+					<button class="button cancel-button" onclick="cancelEdit()">
+						<i class="fa fa-window-close save-icon" aria-hidden="true"></i>
+						
+					</button>
+
+				</div>
+				
+		  	</div>
+
+		    <h2>Search History</h2>
+		    <div id="search-history" class="d-flex justify-content-around flex-wrap align-content-stretch">
+
+		    </div>
+		</div>
+
+		<div class="checkedArtistsContainer p-4">
+		  	<h2>Checked artists</h2>
+		  	<div id="checked-artists">
+		  		<span class="filter-caption"> Filter by genres: </span>
+				<div id="top-genre" class="top-genre">
+				</div>
+
+				<div id="checked" class="d-flex justify-content-around flex-wrap align-content-stretch checked">
+
+			</div>
+			</div>
+		</div>
+		  		
+		  	</div>
+		</div>
+
+
+
+
+
+	</body>
+<script src="profile.js"></script>
+
+</html>

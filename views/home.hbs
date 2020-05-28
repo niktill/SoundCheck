@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SoundCheck: Find the artist you love</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/homeView/home.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm">
+            <h1 id="logo"><a href="">SoundCheck</a></h1>
+            <a href="/searchView/search.html">
+                <button class="search-button">Search for Artists</button>
+            </a>
+            <!-- <div class="search-container">
+                <input type="text" name="artist" placeholder="Search Artist" class="searchBar">
+                <a href="/searchView/search.html">
+                    <button id="search" type="submit"><i class="fa fa-search"></i></button>
+                </a>
+                
+            </div> -->
+            <div class="float-right">
+                <a href="/profileView/profile.html">
+                    <button class="user-button"><i class="fa fa-user"></i></button>
+                </a>
+                <button id="logout-button" onclick='window.location = "/users/logout"'>Sign Out</button>
+                <a href="/adminView/admin.html">
+                    <button id="admin-button"><i class="fa fa-cog"></i></button>
+                </a>
+            </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid">
+        <h1 class="display-4">Find new music based on the artists you love</h1>
+        <p class="lead" id="jumboText">SoundCheck is a website that allows you to find new artists to listen to by using Spotify's related
+            artists feature. Use the search bar to find related artists.</p>
+    </div>
+
+    <div class="photoList">
+        <h2>Featured Artists</h2>
+        <div class="photoStack">
+            <ul id="featuredArtistsList">
+
+                <div class="container">
+                        <img class="image" src="/img/sponge.jpeg" alt="SpongeBob">
+                        <div class="middle">
+                            <a class="text" target="_blank" href="">SpongeBob</a>
+                        </div>
+                    </div>
+                </div>
+
+            </ul>
+    </div>
+
+    <div class = "photoList" id="mostLikedArtists">
+            <h2>Most Checked Artists</h2>
+            <div class="photoStack">
+                <ul id="mostCheckedArtistsList">
+                    <li>
+                        <div class="card">
+                            <img alt='sponge' src="/img/sponge.jpeg" title="SpongeBob">
+                            <div class="card-body">
+                                <h4 class="card-title">SpongeBob</h4>
+                                <h5>
+                                    <span class="checks">Checks: 
+                                        <span class="badge badge-light">100</span>
+                                    </span>
+                                </h5>
+                                <a href="#" target="_blank" class="spotifyLink">View Spotify Page</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+</body>
+<script src="/homeView/home.js"></script>
+</html>

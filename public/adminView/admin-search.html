@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SoundCheck | Admin Search</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/searchView/search.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-light">
+            <h1 id="logo"><a href="/">SoundCheck</a></h1>
+            <div class="search-container">
+                <form action="/search" method="POST">
+                    <input id="artist"name="artist" type="text" placeholder="Search Artist" class="searchBar">
+                    <button id="search" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <a href="/adminView/admin.html">
+                <button id="admin-button"><i class="fa fa-cog"></i></button>
+            </a>
+            <button id="logout-button" onclick='window.location = "/users/logout"'>Sign Out</button>
+    </nav>
+
+    <div id="SearchResult">
+	    <h2>Search Results</h2>
+		<div class="photoStack">
+            <ul class="cardgroup">
+                <!-- <li class="card">
+                    <div class="container">
+                        <img class="image" alt='SpongeBob' src="../img/sponge.jpeg">
+                        <div class="middle">
+                            <button class="checkButton">
+                                <i class="fa fa-check-circle checkIcon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <h4 class="card-title">SpongeBob</h4>
+                        <h5><span class="feature">Popularity: <span class="badge badge-light">1</span></span></h5>
+                        <h5><span class="feature">Checks: <span class="badge badge-light">100</span></span></h5>
+                        <h5><span class="feature">Genre: <span class="badge badge-light">zzz</span></span></h5>
+                        <a href="../homeView/home.html" target="_blank" class="spotifyLink">View Spotify Page</a>
+                    </div>
+                </li> -->
+            </ul>
+		</div>
+	</div>
+
+</body>
+<script src="/searchView/search.js"></script>
+</html>
