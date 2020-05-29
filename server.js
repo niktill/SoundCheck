@@ -77,7 +77,7 @@ app.get('/', sessionChecker, (req, res) => {
 	if (req.session.admin === 1){
 		res.sendFile(__dirname + '/public/adminView/admin-home.html');
 	} else {
-		res.sendFile(__dirname + '/public/homeView/home.html');
+		res.sendFile(__dirname + '/public/home.html');
 	}
 });
 
@@ -85,7 +85,7 @@ app.get('/search', sessionChecker, (req, res) => {
 	if (req.session.admin === 1){
 		res.sendFile(__dirname + '/public/adminView/admin-search.html');
 	} else {
-		res.sendFile(__dirname + '/public/searchView/search.html');
+		res.sendFile(__dirname + '/public/search.html');
 	}
 });
 
@@ -103,7 +103,7 @@ app.get('/admin', sessionChecker, (req, res) => {
 
 // login route
 app.route('/login').get((req, res) => {
-    res.sendFile(__dirname + '/public/loginView/login.html');
+    res.sendFile(__dirname + '/public/login.html');
 })
 
 // create new user route

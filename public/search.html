@@ -10,29 +10,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/searchView/search.css">
+    <link rel="stylesheet" type="text/css" href="/css/master.css">
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-sm bg-light">
+        <nav class="navbar-nav mr-auto align-items-center">
             <h1 id="logo"><a href="/">SoundCheck</a></h1>
-            <div class="search-container">
-                <form action="/search" method="POST">
-                    <input id="artist"name="artist" type="text" placeholder="Search Artist" class="searchBar">
-                    <button id="search" type="submit"><i class="fa fa-search"></i></button>
-                    <input id="randomSearch" type="image" src="../img/dice.jpg" alt="Random" width="50" height="50">
-                </form>
-            </div>
-            <a href="../profileView/profile.html">
-                <button class="user-button"><i class="fa fa-user"></i></button>
-            </a>
-            <button id="logout-button" onclick='window.location = "/users/logout"'>Sign Out</button>
+            <form id="search-artist-form" action="/search" method="POST">
+                <input id="artist" name="artist" type="text" placeholder="Search Artist" class="searchBar">
+                <button id="search" type="submit"><i class="fa fa-search"></i></button>
+                <input id="randomSearch" type="image" src="../img/dice.jpg" alt="Random" width="50" height="50">
+            </form>
+        </nav>
+        <a href="../profile.html">
+            <button class="user-button"><i class="fa fa-user"></i></button>
+        </a>
+        <button id="logout-button" onclick='window.location = "/users/logout"'>Sign Out</button>
     </nav>
-
     <div id="SearchResult">
-	    <h2>Search Results</h2>
-		<div class="photoStack">
+        <h2>Search Results</h2>
+        <div class="photoStack">
             <ul class="cardgroup">
                 <!-- <li class="card">
                     <div class="container">
@@ -49,13 +47,18 @@
                         <h5><span class="feature">Popularity: <span class="badge badge-light">1</span></span></h5>
                         <h5><span class="feature">Checks: <span class="badge badge-light">100</span></span></h5>
                         <h5><div class="feature">Genre: <span class="badge badge-light"> Contemparary country</span></div></h5>
-                        <a href="../homeView/home.html" target="_blank" class="spotifyLink">View Spotify Page</a>
+                        <a href="../home.html" target="_blank" class="spotifyLink">View Spotify Page</a>
                     </div>
                 </li> -->
             </ul>
-		</div>
-	</div>
-
+        </div>
+    </div>
+    <div id="search-results"></div>
 </body>
-<script src="/searchView/search.js"></script>
+<script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+<script src="/react/search-results.js"></script>
+
+<script src="/js/search.js"></script>
+
 </html>
