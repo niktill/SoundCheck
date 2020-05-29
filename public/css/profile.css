@@ -214,10 +214,6 @@
 	display: inline;
 }
 
-.checkButton:hover .checkIcon {
-	display: none;
-}
-
 .checkIcon {
 	font-size: 5em;
 }

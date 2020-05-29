@@ -1,0 +1,72 @@
+.card {
+    min-width: 250px;
+    max-width: 250px;
+    background-color: #fdf1e3;
+    position: relative;
+    margin: 10px;
+}
+
+.card-img-top {
+    max-height: 250px;
+    min-height: 250px;
+    border-radius: 50%;
+}
+
+.card-deck {
+    justify-content: space-around;
+    width: 85%;
+    margin: auto;
+}
+
+.middle {
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    bottom: 0;
+    left: -1px;
+    height: 250px;
+    width: 250px;
+    opacity: 0;
+    transition: .3s ease;
+}
+
+.middlered {
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    bottom: 0;
+    left: -1px;
+    height: 250px;
+    width: 250px;
+    transition: .3s ease;
+}
+
+.checkButton {
+    background: transparent;
+    border: none;
+    position: relative;
+    top: 33%;
+    color: #999999;
+}
+
+
+.checkButton i {
+    position: relative;
+    top: 0;
+    font-size: 80px;
+}
+
+.middle:hover, .middlered:hover {
+    opacity: 1;
+    background-color: rgb(255,255,255,0.7);
+    transition: 0.5s ease;
+}
+
+.red {
+    color: rgb(42, 168, 105);
+}
+
+.card h5 {
+    margin: 10px;
+    color: #FE5F55;
+}

@@ -57,20 +57,19 @@ function populateFeaturedArtists(name, id, image, admin) {
 // This function will add the Artists objects inside array to the mostCheckedArtistsList on index page
 function populateMostLikedArtists(name, spotify_id, image, total_check) {
     // create new card to add to mostCheckedArtistsList
-    const listEl = document.createElement('li');
     const artistCard = document.createElement('div');
-    artistCard.className = 'card';
+    artistCard.className = 'card text-center';
 
     const artistImage = document.createElement('img');
     artistImage.src = image;
-
+    artistImage.className = 'card-img-top'
     artistImage.alt = name;
 
     const cardBody = document.createElement('div');
     cardBody.className = 'card-body';
 
     const artistName = document.createElement('h4');
-    artistName.className = 'title';
+    artistName.className = 'card-title';
     artistName.innerText = name;
 
     const checks = document.createElement('h5');
@@ -82,6 +81,9 @@ function populateMostLikedArtists(name, spotify_id, image, total_check) {
     const checksNumSpan = document.createElement('span');
     checksNumSpan.className = 'badge badge-light';
     checksNumSpan.innerText = total_check;
+    
+    const cardFooter = document.createElement('div');
+    cardFooter.className= 'card-footer';
 
     const spotifyLink = document.createElement('a');
     spotifyLink.className = 'spotifyLink';
@@ -95,10 +97,10 @@ function populateMostLikedArtists(name, spotify_id, image, total_check) {
     cardBody.appendChild(checks);
     checks.appendChild(checksSpan);
     checksSpan.appendChild(checksNumSpan);
-    cardBody.appendChild(spotifyLink);
+    artistCard.appendChild(cardFooter);
+    cardFooter.appendChild(spotifyLink);
 
-    listEl.appendChild(artistCard);
-    mostCheckedArtistsList.appendChild(listEl);
+    mostCheckedArtistsList.appendChild(artistCard);
 }
 
 function getLikedArtist() {

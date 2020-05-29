@@ -15,18 +15,20 @@
 
 <body>
     <nav class="navbar navbar-expand-sm">
-            <h1 id="logo"><a href="/">SoundCheck</a></h1>
-            <button class="search-button" onclick="window.location.href='/search'">Search for Artists</button>
-            <a href="/profile.html">
-                <button class="user-button"><i class="fa fa-user"></i></button>
-            </a>
-            <button id="logout-button" onclick='window.location = "/users/logout"'>Sign Out</button>
+        <h1 id="logo"><a href="/">SoundCheck</a></h1>
+        <button class="search-button" onclick="window.location.href='/search'">Search for Artists</button>
+        <a href="/profile.html">
+            <button class="user-button"><i class="fa fa-user"></i></button>
+        </a>
+        <button id="logout-button" onclick='window.location = "/users/logout"'>Sign Out</button>
     </nav>
 
     <div class="jumbotron jumbotron-fluid">
         <h1 class="display-4">Find new music based on the artists you love</h1>
-        <p class="lead" id="jumboText">SoundCheck is a website that allows you to find new artists to listen to by using Spotify's API. 
-            Click on the Search for Artists button to head to the search page! On search page use the search bar to find related 
+        <p class="lead" id="jumboText">SoundCheck is a website that allows you to find new artists to listen to by using
+            Spotify's API.
+            Click on the Search for Artists button to head to the search page! On search page use the search bar to find
+            related
             artists and roll the dice for a random search based on the genres you love! </p>
     </div>
 
@@ -43,15 +45,14 @@
                     </div>
                 </li> -->
             </ul>
-    </div>
+        </div>
 
-    <div class="photoList" id="mostLikedArtists">
+        <div class="photoList" id="mostLikedArtists">
             <h2 class="text-center">Most Checked Artists</h2>
-            <div class="photoStack">
-                <ul id="mostCheckedArtistsList">
-                    <!-- <li>
+            <div id="mostCheckedArtistsList" class="card-deck">
+                <!-- <li>
                         <div class="card">
-                            <img alt='sponge' src="/img/sponge.jpeg" title="SpongeBob">
+                            <img alt='sponge' src="/img/sponge.jpeg" class="card-img-top" title="SpongeBob">
                             <div class="card-body">
                                 <h4 class="card-title">SpongeBob</h4>
                                 <h5>
@@ -59,15 +60,16 @@
                                         <span class="badge badge-light">100</span>
                                     </span>
                                 </h5>
-                                <a href="#" target="_blank" class="spotifyLink">View Spotify Page</a>
+                                <div class="card-footer">
+                                    <a href="#" target="_blank" class="spotifyLink">View Spotify Page</a>
+                                </div>
                             </div>
                         </div>
                     </li> -->
-                </ul>
             </div>
         </div>
-    </div>
-        
+
 </body>
 <script src="/js/home.js"></script>
+
 </html>

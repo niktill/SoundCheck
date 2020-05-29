@@ -3,16 +3,6 @@ body {
     background-position: center;
 }
 
-/*a {
-    text-decoration: none;
-}*/
-
-h2 {
-    color: #7A9E9F;
-    margin-left: 4%;
-    margin-bottom: 20px;
-}
-
 #header {
     padding: 25px;
     width: 100%;
@@ -50,44 +40,7 @@ h2 {
 }
 
 .photoStack {
-    display: flex;
     width: 100%;
-}
-
-.card {
-    display: inline-block;
-    width: 250px;
-    margin: 20px;
-    background: rgba(255, 255, 255, 0.4);
-    border: none;
-    border-radius: 20px;
-    transition: .5s;
-    height: 517px
-}
-
-.card:hover {
-    transform: scale(1.2)
-}
-
-.card-body {
- text-align: center;
- padding: 10px 0;
- margin-top:10px;
-}
-
-.card-body h4 {
-    margin: 5px;
-    color: #4F6367;
-    height: 50px
-}
-.card img {
-    margin-top: 10px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 50%;
-    width: 80%;
-    height: 85%;
 }
 
 .spotifyLink {
@@ -110,12 +63,6 @@ h2 {
     text-decoration: none;
 }
 
-.card h5 {
-    color: #FE5F55;
-    margin: 10px;
-
-}
-
 .feature {
     background-color: lightblue;
     padding: 5px;
@@ -131,62 +78,3 @@ h2 {
 } */
 
 
-.checkButton {
-    background: transparent;
-    border: none;
-    right: 10px;
-    color: #A8A9A9;
-}
-
-.checkButton:focus {
-    outline: 0;
-}
-
-/*.checkIcon {
-    font-size: 5em;
-}*/
-
-.checkButton i{
-    position: relative;
-    top: 15px;
-    font-size: 80px;
-}
-
-.middle {
-    transition: 1s ease;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    position: relative;
-    top: -50%;
-    left: 50%;
-    width: 100%;
-}
-
-.middlered {
-    transition: 1s ease;
-    opacity: 1;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    position: relative;
-    top: -50%;
-    left: 50%;
-    width: 100%;
-}
-
-.container{
-    height: 200px;
-}
-
-.container:hover .image {
-    opacity: 0.6;
-    transform: scale(1.1)
-}
-
-.container:hover .middle {
-    opacity: 1;
-}
-
-.red{
-    color: #FE5F55;
-}

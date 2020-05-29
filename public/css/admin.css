@@ -4,20 +4,6 @@ body{
     background-position: center;
 }
 
-.navbar {
-    background-color: #fdf1e3 !important;
-}
-
-#logo {
-    margin-right: 10px;
-    color: #7A9E9F;
-
-}
-#logo a {
-    text-decoration: none;
-    color: inherit;
-}
-
 .users-container {
     background-color: rgb(255, 255, 255,0.6);
     height: 400px;
@@ -45,30 +31,7 @@ ul li{
     display: inline-block;
 }
 
-.card {
-    width: 250px;
-    display: inline-block;
-    margin: 10px;
-}
-.card-body {
-    padding: 10px;
-}
-.card p {
-    margin: auto 10px;
-}
-.card img {
-    height: 100px;
-    width: 100px;
-    display: block;
-    margin: auto;
-    border-radius: 50%;
-}
-
 .edit-button {
     margin-left: 5px;
     border-radius: 5px;
-}
-
-.fa ,.fa-pencil {
-    pointer-events: none;
 }

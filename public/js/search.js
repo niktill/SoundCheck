@@ -14,7 +14,7 @@ class SearchResult{
 const artistNameInput = document.querySelector("#artist");
 const searchButton = document.querySelector("#search");
 const randomSearchButton = document.querySelector("#randomSearch");
-const Result = document.querySelector('#SearchResult').children[1];
+const Result = document.querySelector('#SearchResult');
 
 
 // Event Listners
@@ -107,7 +107,7 @@ async function search(e) {
                 }
             }
             // remove previous search result
-            const results = document.querySelector('#SearchResult').children[1]
+            const results = document.querySelector('#SearchResult')
             results.innerHTML = ""
             let searchResult = []
             // build up results
@@ -186,19 +186,16 @@ async function getRandomArtist(){
 check if any of the search result items are in user's check artists, if they are start with a red check on it
 */
 function populateSearchResult(searchResultList ,checkedArtists, admin){
-    const cardgroup = document.createElement('ul');
-    cardgroup.className = 'cardgroup';
+    const cardgroup = document.createElement('div');
+    cardgroup.className = 'card-deck';
 
     for (let i = 0; i < searchResultList.length; i++) {
-        const card = document.createElement('li');
-        card.className = 'card';
-
-        const container = document.createElement('div');
-        container.className = 'container';
+        const card = document.createElement('div');
+        card.className = 'card text-center';
 
         const img = document.createElement('img');
         img.src = searchResultList[i].Image;
-        img.className = 'image';
+        img.className = 'card-img-top';
 
         const middle = document.createElement('div');
 
@@ -242,7 +239,7 @@ function populateSearchResult(searchResultList ,checkedArtists, admin){
                     span2lastCheck.innerText = json.last_checked;
                 }
             });
-        } else {
+        } else {            
             const url = '/artist/' + searchResultList[i].SpotifyId;
             fetch(url).then((res) => {
                 if (res.status === 200) {
@@ -268,8 +265,9 @@ function populateSearchResult(searchResultList ,checkedArtists, admin){
                 middle.classList.replace('middle', 'middlered');
             }
         }
-
-        j.onclick = function() {
+        console.log(j);
+        
+        j.onclick = function() {            
             const time = new Date()
             const last_checked_time = time.getFullYear() + "/" + ("0" + (time.getMonth() + 1)).slice(-2) + "/" + ("0" + time.getDate()).slice(-2) + " " + ("0" + time.getHours()).slice(-2) + ":" + ("0" + time.getMinutes()).slice(-2)
             
@@ -294,13 +292,12 @@ function populateSearchResult(searchResultList ,checkedArtists, admin){
         };
         button.appendChild(j);
         middle.appendChild(button);
-        container.appendChild(img);
-        container.appendChild(middle);
 
         const cardbody = document.createElement('div');
         cardbody.className = 'card-body';
 
         const h4 = document.createElement('h4');
+        h4.className= 'card-title';
         h4.innerText = searchResultList[i].Name;
 
         const h5checks = document.createElement('h5');
@@ -338,16 +335,21 @@ function populateSearchResult(searchResultList ,checkedArtists, admin){
         a.onclick = function () {
             window.open(a.href);
         };
+        const cardFooter =  document.createElement('div');
+        cardFooter.className = 'card-footer';
 
         link_div.appendChild(a)
-        cardbody.appendChild(h4)
-        cardbody.appendChild(h5checks)
-        cardbody.appendChild(h5genre)
-        cardbody.appendChild(h5lastCheck)
-        cardbody.appendChild(link_div)
+        cardFooter.appendChild(link_div);
+        cardbody.appendChild(h4);
+        cardbody.appendChild(h5checks);
+        cardbody.appendChild(h5genre);
+        cardbody.appendChild(h5lastCheck);
+        
 
-        card.appendChild(container);
+        card.appendChild(img);
+        card.appendChild(middle);;
         card.appendChild(cardbody);
+        card.appendChild(cardFooter);
 
         cardgroup.appendChild(card);
     }
@@ -366,7 +368,6 @@ function checkAndUncheck(button, name, spotify_id, image, genre, admin, last_che
             UncheckArtist(spotify_id)
         }
         return 0
-    // }else if(!button.classList.contains('red')){
     }else{
         button.classList.add('red')
         middle.classList.replace('middle', 'middlered');

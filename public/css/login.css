@@ -34,9 +34,8 @@ body{
 }
 
 
-h2, h3, h4 {
+#logInForm h2{
     text-align: center;
-    padding: 10px;
     color: #7A9E9F;
 }
 .myButton {

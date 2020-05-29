@@ -12,25 +12,22 @@ body {
 }
 
 .jumbotron {
-    opacity: 0.5;
     text-align: center;
-    text-decoration-color: #4F6367;
+    color: #4F6367;
+    background-color: rgb(255, 255, 255, 0.5)
 }
 
 #jumboText {
-    width: 500px;
+    max-width: 600px;
     margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .checks {
     background-color: lightblue;
     padding: 5px;
     border-radius: 5px;
-}
-
-.card h5 {
-    margin: 20px;
-    color: #FE5F55;
 }
 
 .spotifyLink {
@@ -65,46 +62,8 @@ body {
 
 .photoStack {
     width: 100%;
-}
-
-.photoStack ul{
-    list-style: none;
-}
-
-.photoStack li {
-    display: inline;
-}
-.card {
-    display: inline-block;
-    width: 250px;
-    min-height: 358px;
-    margin: 20px;
-    background: rgba(255, 255, 255, 0.4);
-    border: none;
-    border-radius: 20px;
-    transition: .5s;
-}
-
-.card:hover {
-    transform: scale(1.2)
-}
-
-.card-body {
- text-align: center;
-}
-
-.card-body h4 {
-    margin-bottom: 20px;
-    color: #4F6367;
-   }
-.card img {
-    margin-top: 10px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 50%;
-    width: 80%;
-    height: 199px;
+    margin: 5%;
+    margin-top: 10px
 }
 
 .photoList {
@@ -116,10 +75,13 @@ body {
     height: 400px;
 }
 
+#mostCheckedArtistsList {
+    margin: 5%;
+    margin-top: 20px;
+}
+
 h2 {
     color: #7A9E9F;
-    margin-left: 4%;
-    margin-bottom: 20px;
 }
 
 .photo:hover {
@@ -150,24 +112,9 @@ a {
     width: 100%;
 }
 
-.middle {
-    transition: 1s ease;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    position: relative;
-    top: -50%;
-    left: 50%;
-    width: 100%;
-}
-
 .container:hover .image {
     opacity: 0.6;
     transform: scale(1.2)
-}
-
-.container:hover .middle {
-    opacity: 1;
 }
 
 .text {
@@ -175,7 +122,7 @@ a {
     color: #4F6367;
     font-size: 20px;
     padding: 16px 32px;
-    left: 50%; 
+    left: 50%;
     top: 50%;
     border-radius: 30px;
     font-weight: bold;
@@ -183,5 +130,3 @@ a {
     border: none;
     outline: none !important;
 }
-
-
