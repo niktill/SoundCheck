@@ -14,8 +14,8 @@
 }
 
 .card-img-top {
-    max-height: 200px;
-    min-height: 200px;
+    max-height: 225px;
+    min-height: 225px;
     border-radius: 50%;
 }
 
@@ -28,11 +28,10 @@
 .card .middle {
     position: absolute;
     border-radius: 50%;
-    top: 0;
-    bottom: 0;
-    left: -1px;
-    height: 250px;
-    width: 250px;
+    top: 10px;
+    left: 9px;
+    height: 225px;
+    width: 230px;
     opacity: 0;
     transition: .3s ease;
 }
@@ -40,11 +39,10 @@
 .card .middlered {
     position: absolute;
     border-radius: 50%;
-    top: 0;
-    bottom: 0;
-    left: -1px;
-    height: 200px;
-    width: 200px;
+    top: 10px;
+    left: 9px;
+    height: 225px;
+    width: 230px;
     transition: .3s ease;
 }
 
