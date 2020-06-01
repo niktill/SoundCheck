@@ -5,8 +5,8 @@
 }
 
 .container:hover #profilePicture {
-    opacity: 1;
-    transform: scale(1)
+	opacity: 1;
+	transform: scale(1)
 }
 
 #upload-pro-pic {
@@ -19,66 +19,72 @@
 }
 
 #search-history {
+	max-height: 400px;
 	overflow-y: scroll;
-
+	align-items: flex-start;
 }
 
 .profileContainer {
-    background-color: rgba(255, 255, 255, 0.747);
-    border-radius: 10px;
+	background-color: rgba(255, 255, 255, 0.747);
+	border-radius: 10px;
+	margin: 5vh;
+	margin-top: 3vh;
+	margin-bottom: 0;
+	width: 660px;
+	height: 470px;
+	overflow: auto;
+}
 
-    margin: 5vh;
-    margin-top: 3vh;
-    margin-bottom: 0;
-
-    width: 660px;
-    height: 470px;
-    overflow: auto;
+#search-history-header {
+	margin-top: 10px;
 }
 
 .checkedArtistsContainer {
 	background-color: rgba(255, 255, 255, 0.747);
-    border-radius: 10px;
-
-    margin: 5vh;
-    margin-top: 3vh;
-
-    margin-bottom: 0;
-
-    width: 800px;
-    height: 470px;
-    overflow: auto;
-    overflow-y: scroll;
+	border-radius: 10px;
+	margin: 5vh;
+	margin-top: 3vh;
+	margin-bottom: 0;
+	width: 800px;
+	height: 470px;
+	overflow: auto;
+	overflow-y: scroll;
 }
 
 .checkedArtist {
-	margin: 10px;
-	margin-bottom: 40px;
-	width: 160px;
-    height: 160px;
+	position: relative;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	width: 150px;
+	height: 150px;
+	padding: 0;
+}
+
+.container.checkedArtist .middle {
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	border-radius: 50%;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: .3s ease;
 }
 
 .checkedArtistName {
-
-	display: block;
-    background-color: #B8D8D8;
-    color: #4F6367;
-    font-size: 14px;
-    margin-top: 0px;
-    padding: 10px 22px;
-
-    position: relative;
-    top: -90px;
-
-
-    border-radius: 30px;
-    font-weight: bold;
-
-    width: 160px;
-    text-align: center;
-
-    border: none;
-    outline: none !important;
+	position: absolute;
+	background-color: #B8D8D8;
+	color: #4F6367;
+	font-size: 14px;
+	padding: 10px;
+	border-radius: 30px;
+	font-weight: bold;
+	text-align: center;
+	border: none;
+	outline: none !important;
 }
 
 .profilePictureContainer {
@@ -86,16 +92,10 @@
 	margin-right: 0;
 	margin-top: 20px;
 	max-height: 200px;
-/*	position: static;
-	z-index: -1;*/
 }
 
 .profileNameContainer {
 	margin-top: 20px;
-	margin-left: -60px;
-	height: 210px;
-	width: 300px;
-	position: static;
 	z-index: 2;
 }
 
@@ -118,9 +118,9 @@
 	padding: 0px 2px;
 	margin-left: 4%;
 
-    background-color: white;
-    border: none;
-    outline: 3px solid #B8D8D8;
+	background-color: white;
+	border: none;
+	outline: 3px solid #B8D8D8;
 }
 
 .username-input:focus {
@@ -151,9 +151,7 @@
 	font-size: 20px;
 	font-weight: 300;
 	line-height: 1;
-
 	padding-left: 8px;
-
 	outline-width: 2px;
 	display: none;
 }
@@ -191,13 +189,22 @@
 	color: black;
 }
 
+#checked .checkButton {
+	padding: 1px 4px;
+	background: white;
+    border-radius: 50%;
+    border: none;
+    position: relative;
+    top: 33%;
+    color: #f794a5;
+}
+
+#checked .checkButton i {
+	font-size: 40px;
+}
 
 .checkButton:focus {
 	outline: 0;
-}
-
-.checkButton .uncheckIcon {
-	display: none;
 }
 
 .checkButton:hover .uncheckIcon {
@@ -251,11 +258,9 @@
 }
 
 .search-history-text {
-	width: 30%;
 	font-size: 12px;
 	text-align: center;
-	vertical-align: middle;
-	padding: 12px 22px;
+	padding: 12px;
 	margin: 4px;
 }
 
@@ -281,13 +286,13 @@
 	width: 100%;
 }
 
-.noHover{
-    pointer-events: none;
+.noHover {
+	pointer-events: none;
 }
 
 .filter-caption {
 	color: #4F6367;
-    font-size: 14px;
-    left: 24px;
-    position: relative;
+	font-size: 14px;
+	left: 24px;
+	position: relative;
 }

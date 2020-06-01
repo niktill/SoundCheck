@@ -27,7 +27,6 @@ function getUser() {
 function initializeProfile(user) {
     document.querySelector("#username").innerHTML = user.username
     //document.querySelector("#profilePicture").setAttribute("src", thisUser.profilePic)
-    document.querySelector("#profilePicture").setAttribute("alt", user.username)
 }
 
 function populateGenre(artists) {
@@ -134,13 +133,8 @@ function populateCheckedArtists(artists) {
             div.remove()
         };
 
-        const checkIcon = document.createElement("i");
-        checkIcon.className = "fa fa-check-circle checkIcon";
-        checkIcon.setAttribute("aria-hidden", "true");
-
         const uncheckIcon = document.createElement("i");
         uncheckIcon.className = "fa fa-times-circle uncheckIcon";
-        uncheckIcon.setAttribute("aria-hidden", "true");
 
         const link = document.createElement("a");
         link.className = "checkedArtistName";
@@ -148,7 +142,6 @@ function populateCheckedArtists(artists) {
         link.href = 'https://open.spotify.com/artist/' + artist.spotify_id;
         link.innerText = artist.name;
 
-        button.appendChild(checkIcon);
         button.appendChild(uncheckIcon);
         middle.appendChild(button);
         newArtistEl.appendChild(img);
