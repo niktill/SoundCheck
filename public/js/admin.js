@@ -112,7 +112,6 @@ function removeUser(e) {
         // remove user from database
         // get user's id
         const str = e.target.parentElement.parentElement.children[0].innerText
-        console.log(str);
         
         const id = str.substring(9, str.length)
         // set url

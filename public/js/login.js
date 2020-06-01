@@ -39,7 +39,6 @@ function signIn(e) {
     .then(function(res) {
         // Handle response we get from the API
         if (res.status === 200) {
-            console.log(res);
             
             return alert('Successfully Logged In!')
            
@@ -80,8 +79,6 @@ function createAccount(e){
     .then(function(res) {
         // Handle response we get from the API
         if (res.status === 200) {
-            console.log(res);
-
             return alert('Successfully created account!')
            
         } else {

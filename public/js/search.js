@@ -264,9 +264,7 @@ function populateSearchResult(searchResultList ,checkedArtists, admin){
                 j.classList.add('red');
                 middle.classList.replace('middle', 'middlered');
             }
-        }
-        console.log(j);
-        
+        }        
         j.onclick = function() {            
             const time = new Date()
             const last_checked_time = time.getFullYear() + "/" + ("0" + (time.getMonth() + 1)).slice(-2) + "/" + ("0" + time.getDate()).slice(-2) + " " + ("0" + time.getHours()).slice(-2) + ":" + ("0" + time.getMinutes()).slice(-2)

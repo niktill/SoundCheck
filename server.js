@@ -73,9 +73,9 @@ const authenticate = (req, res, next) => {
 // ------- ROUTES -------
 
 // main route
-app.get('/', sessionChecker, (req, res) => {
+app.get('/', sessionChecker, (req, res) => {	
 	if (req.session.admin === 1){
-		res.sendFile(__dirname + '/public/adminView/admin-home.html');
+		res.sendFile(__dirname + '/adminView/admin-home.html');
 	} else {
 		res.sendFile(__dirname + '/public/home.html');
 	}
@@ -83,12 +83,20 @@ app.get('/', sessionChecker, (req, res) => {
 
 app.get('/search', sessionChecker, (req, res) => {
 	if (req.session.admin === 1){
-		res.sendFile(__dirname + '/public/adminView/admin-search.html');
+		res.sendFile(__dirname + '/adminView/admin-search.html');
 	} else {
 		res.sendFile(__dirname + '/public/search.html');
 	}
 });
 
+// get an admin page
+app.get('/adminView/:adminPage', sessionChecker, (req, res) => {
+	if (req.session.admin === 1){
+		res.sendFile(__dirname + '/adminView/' + req.params.adminPage);
+	} else {
+		res.send(404);
+	}
+});
 
 // 		-------- Authentication Routes --------
 //Check if user is admin
@@ -250,10 +258,7 @@ app.post('/search', sessionChecker, (req, res) => {
 					// could not connect to API
 					res.status(400).send()
 				} else if (response.statusCode === 200){
-					// Success
-					console.log(body.artists.items[0].name);
-					console.log(body.artists.items[0].id);
-					
+					// Success					
 					// If it is an admin search, send them regular find artist search
 					if (req.session.admin === 1){						
 						res.status(200).send(body)
@@ -520,8 +525,7 @@ app.delete('/featuredArtist/:id', (req, res) => {
     // Otheriwse, findByIdAndRemove
     FeaturedArtist.findByIdAndRemove(id).then((artist) => {
         if (!artist) {
-        	console.log("cannot find featured artist");
-            res.status(404).send()
+			res.status(404).send()
         } else {
             res.status(200).send({ artist })
         }
