@@ -25,7 +25,7 @@ function populateFeaturedArtists(name, id, image, admin) {
         button.onclick = function() {
             //removes artist from the DOM
             const list = this.parentElement.parentElement.parentElement;
-            featuredArtistList.removeChild(list);
+            featuredArtistList.removeChild(div);
             deleteFeatured(id);
         };
         const inner = document.createElement('i');
@@ -45,10 +45,7 @@ function populateFeaturedArtists(name, id, image, admin) {
     div.appendChild(img);
     div.appendChild(middle);
 
-    const listEl = document.createElement('li');
-    listEl.appendChild(div);
-
-    featuredArtistList.appendChild(listEl);
+    featuredArtistList.appendChild(div);
 }
 
 

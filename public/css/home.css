@@ -61,9 +61,7 @@ body {
 }
 
 .photoStack {
-    width: 100%;
-    margin: 5%;
-    margin-top: 10px
+    margin-top: 20px
 }
 
 .photoList {
@@ -71,8 +69,12 @@ body {
     margin-top: 20px;
 }
 
-#featuredArtists {
-    height: 400px;
+#featuredArtistsList {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    height: 250px;
 }
 
 #mostCheckedArtistsList {
@@ -94,13 +96,14 @@ a {
 }
 
 .container {
-    padding: 20px;
-    width: 300px;
-    height: 300px;
+    margin: 10px;
+    width: 275px;
+    height: 250px;
     display: inline-block;
+    position: relative;
 }
 
-.image {
+.container .image {
     opacity: 1;
     display: block;
     transition: .5s ease;
@@ -121,12 +124,30 @@ a {
     background-color: #B8D8D8;
     color: #4F6367;
     font-size: 20px;
-    padding: 16px 32px;
-    left: 50%;
-    top: 50%;
+    padding: 10px 20px;
     border-radius: 30px;
     font-weight: bold;
-    width: 80%;
     border: none;
     outline: none !important;
+}
+
+.container .middle {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 50%;
+    top: 0;
+    bottom: 0;
+    left: 5%;
+    width: 248px;
+    height: 250px;
+    opacity: 0;
+    transition: .3s ease;
+}
+
+
+.container .middle:hover {
+    opacity: 1;
+    transition: 0.5s ease;
 }

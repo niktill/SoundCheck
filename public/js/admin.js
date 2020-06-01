@@ -34,12 +34,9 @@ function populateUserList(array) {
     for (let index = 0; index < array.length; index++) {
         const user = array[index];
         
-        const listEl = document.createElement('li');
-        userList.appendChild(listEl);
-
         const card = document.createElement('div');
         card.className = 'card';
-        listEl.appendChild(card);
+        userList.appendChild(card);
 
         const cardHeader = document.createElement('div');
         cardHeader.className = 'card-header';
@@ -49,11 +46,6 @@ function populateUserList(array) {
         const cardBody = document.createElement('div');
         cardBody.className = 'card-body';
         card.appendChild(cardBody);
-
-        const userImage = document.createElement('img');
-        userImage.src = '../img/profile.png';
-        userImage.alt = user.username;
-        cardBody.appendChild(userImage);
 
         const detailsList = document.createElement('ul');
         cardBody.appendChild(detailsList);

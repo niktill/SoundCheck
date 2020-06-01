@@ -1,24 +1,27 @@
-body{
+body {
     margin-top: 0;
     background-image: url('/img/headphones.jpg');
     background-position: center;
 }
 
 .users-container {
-    background-color: rgb(255, 255, 255,0.6);
+    background-color: rgb(255, 255, 255, 0.6);
     height: 400px;
-    margin-top: 30px; 
+    margin-top: 30px;
     margin: 30px;
     overflow-y: scroll;
 }
 
 .users-container h2 {
     margin-left: 10px;
+    margin-top: 10px;
     color: #7A9E9A;
 }
+
 .users-container input {
     width: 150px;
 }
+
 .users i {
     pointer-events: none;
 }
@@ -27,11 +30,21 @@ ul {
     list-style-type: none;
 }
 
-ul li{
+ul li {
     display: inline-block;
 }
 
 .edit-button {
     margin-left: 5px;
     border-radius: 5px;
+}
+
+#userList.card-deck {
+    justify-content: flex-start;
+    margin: 20px;
+    padding: 0;
+}
+
+#userList .card-body ul {
+    padding: 0;
 }
