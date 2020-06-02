@@ -94,7 +94,7 @@ app.get('/adminView/:adminPage', sessionChecker, (req, res) => {
 	if (req.session.admin === 1){
 		res.sendFile(__dirname + '/adminView/' + req.params.adminPage);
 	} else {
-		res.send(404);
+		res.status(403).send();
 	}
 });
 
