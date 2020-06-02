@@ -1,8 +1,12 @@
 ## SoundCheck
 
-SOUNDCHECK (https://dry-island-15572.herokuapp.com)
+Heroku URL - https://sound-check.herokuapp.com/
 
 Original School Project Git Repo https://github.com/csc309-winter-2019/team29
+
+### Description
+
+SoundCheck is a website built with HTML, CSS, JavaScript, Nodejs Express and MongoDB. This website allows its users to create an account, search for similar artists using Spotify's Web API and to save artists they find to check out their music later. On top of this there are additional features users can enjoy such as filtering their saved artists by genre, viewing the most 'checked' artists, changing their account credentials, viewing their own search history, and performing a random serch based of their search history and more! There is also the ability to add admins for this site that can remove users or update their credentials and add or remove featured artists to the homepage of the website.
 
 #### Overview of routes
 
@@ -24,15 +28,13 @@ Original School Project Git Repo https://github.com/csc309-winter-2019/team29
 
 8. /checkedArtist: GET/UPDATE checked artists of users
 
-   
-
 #### Edits/New features made
 
 ------
 
 ###### New features:
 
-1. "I'm Feeling Lucky" search (like the Google search engine)
+1. "I'm Feeling Lucky" search
    - Based on current checked artists by user
    - Search artists based on a random genre
 2. Sort genres based on checked artists
@@ -112,3 +114,12 @@ to all users on the homepage. Unchecking an artist will remove the artist from t
 
 On the admin page, an admin can view all of the users, their user ids for the database, and their usernames.
 Admins are able to change the username or password of a user, as well as remove a user on this page.
+
+
+### Credits
+
+- Backend built with Nodejs and Express: https://nodejs.org/en/, https://expressjs.com/
+- Database created with Mongoose and hosted on MongoDB: https://mongoosejs.com/, https://www.mongodb.com/
+- Styling imported from BootStrap: https://getbootstrap.com/
+- Spotify's Web API: https://developer.spotify.com/documentation/web-api/
+- Site deployed on Heroku: https://www.heroku.com/
