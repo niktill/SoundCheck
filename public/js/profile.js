@@ -139,6 +139,7 @@ function populateCheckedArtists(artists) {
         const link = document.createElement("a");
         link.className = "checkedArtistName";
         link.classList.add("align-middle");
+        link.target = '_blank'
         link.href = 'https://open.spotify.com/artist/' + artist.spotify_id;
         link.innerText = artist.name;
 

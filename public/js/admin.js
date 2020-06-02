@@ -143,15 +143,15 @@ function removeUser(e) {
 
 function editDetails(e){
     e.preventDefault();
-    if (e.target.className == 'edit-button'){
-        if (e.target.previousSibling.name == 'username'){
+    if (e.target.className == 'edit-button' || e.target.className == 'fa fa-pencil'){
+        if (e.target.closest('form').querySelector('input').name == 'username'){
             //change username of user in database
             // get user's id
-            const str = e.target.parentElement.parentElement.parentElement.parentElement.parentElement.children[0].innerText
+            const str = e.target.closest('.card').querySelector('.card-header').innerText;
             const id = str.substring(9, str.length)
             // set url
             const url = '/users/username/' + id;            
-            const newUsername = e.target.previousSibling.value;
+            const newUsername = e.target.closest('form').querySelector('input').value;
             data = {
                 username: newUsername
             }
@@ -178,14 +178,14 @@ function editDetails(e){
                 console.log(error)
             })
         }
-        else if (e.target.previousSibling.name === 'password'){
+        else if (e.target.closest('form').querySelector('input').name == 'password'){
             //change username of user in database
             // get user's id
-            const str = e.target.parentElement.parentElement.parentElement.parentElement.parentElement.children[0].innerText
+            const str = e.target.closest('.card').querySelector('.card-header').innerText;
             const id = str.substring(9, str.length)
             // set url
             const url = '/users/password/' + id;            
-            const newPassword = e.target.previousSibling.value;
+            const newPassword = e.target.closest('form').querySelector('input').value;
             data = {
                 password: newPassword
             }
