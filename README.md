@@ -1,6 +1,6 @@
 ## SoundCheck
 
-Heroku URL - https://sound-check.herokuapp.com/
+Site URL - https://sound-check.herokuapp.com/
 
 Original Project Git Repo https://github.com/csc309-winter-2019/team29
 
