@@ -22,12 +22,13 @@ function getUser() {
         })
 }
 
- 
+
 
 function initializeProfile(user) {
     document.querySelector("#username").innerHTML = user.username
-    //document.querySelector("#profilePicture").setAttribute("src", thisUser.profilePic)
 }
+
+let activeGenres = []
 
 function populateGenre(artists) {
     const div = document.querySelector("#top-genre");
@@ -50,7 +51,7 @@ function populateGenre(artists) {
         genres.push([g, arr[g]]);
     });
 
-    genres.sort(function(a, b) {
+    genres.sort(function (a, b) {
         return b[1] - a[1];
     });
 
@@ -62,43 +63,29 @@ function populateGenre(artists) {
         button.innerHTML = genre;
         button.className = "text genre";
         button.onclick = function (event) {
-            if (this.style.background === "rgb(184, 216, 216)") {
-                this.style.background = "cornflowerblue";
-                fetch('/current-user')
-                    .then((res) => {
-                        if (res.status === 200) {
-                            return res.json();
-                        } else {
-                            alert('Error loading user');
+            fetch('/current-user')
+                .then((res) => {
+                    if (res.status === 200) {
+                        return res.json();
+                    } else {
+                        alert('Error loading user');
+                    }
+                }).then((user) => {
+                    if (activeGenres.includes(genre)) {
+                        activeGenres.splice(activeGenres.indexOf(genre), 1)
+                    } else {
+                        this.style.background === "rgb(184, 216, 216)";
+                        this.style.opacity = "1";
+                        activeGenres.push(genre);
+                    }
+                    const artists = user.artists.filter(a => activeGenres.includes(a.genre));
+                    populateCheckedArtists(artists);
+                    for (let i = 0; i < div.children.length; i++) {
+                        if (!activeGenres.includes(div.children[i].innerHTML)) {
+                            div.children[i].style.opacity = "0.5";
                         }
-                    }).then((user) => {
-                        const artists = user.artists.filter(a => a.genre === genre);
-                        populateCheckedArtists(artists);
-                         for (let i = 0; i < div.children.length; i++) {
-                            if (div.children[i].innerHTML !== genre) {
-                                div.children[i].disabled = true;
-                                div.children[i].style.opacity = "0.5";
-                            }
-                         }
+                    }
                 })
-            } else {
-                this.style.background = "#B8D8D8";
-                fetch('/current-user')
-                    .then((res) => {
-                        if (res.status === 200) {
-                            return res.json();
-                        } else {
-                            alert('Error loading user');
-                        }
-                    }).then((user) => {
-                        populateCheckedArtists(user.artists);
-                        for (let i = 0; i < div.children.length; i++) {
-                            div.children[i].disabled = false;
-                            div.children[i].style.opacity = "1";
-                        }
-                })
-            }
-
         };
         div.appendChild(button);
     });
@@ -127,7 +114,7 @@ function populateCheckedArtists(artists) {
 
         const button = document.createElement("button");
         button.className = "button checkButton";
-        button.onclick = function(){
+        button.onclick = function () {
             uncheckArtist(artist.spotify_id);
             const div = this.parentElement.parentElement;
             div.remove()
@@ -151,7 +138,7 @@ function populateCheckedArtists(artists) {
 
         div.appendChild(newArtistEl)
     });
-    
+
 }
 
 
@@ -182,7 +169,7 @@ function populateSearchHistory(searchHistory) {
 
 
 function uncheckArtist(spotify_id) {
-    const url = '/checkedArtist/' + spotify_id ;
+    const url = '/checkedArtist/' + spotify_id;
     // Create our request constructor with all the parameters we need
     const request = new Request(url, {
         method: 'delete',
@@ -192,7 +179,7 @@ function uncheckArtist(spotify_id) {
         },
     });
     fetch(request)
-        .then(function(res) {
+        .then(function (res) {
             if (res.status === 200) {
                 //alert('Checked artists deleted')
             } else {
@@ -286,7 +273,10 @@ function saveProfile() {
 
 function changeUsername() {
     const url = '/users/update/' + thisUser._id;
-    data = { username: thisUser.username, password: thisUser.password };
+    data = {
+        username: thisUser.username,
+        password: thisUser.password
+    };
 
     const request = new Request(url, {
         method: 'PATCH',
