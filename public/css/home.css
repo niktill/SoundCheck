@@ -72,6 +72,7 @@ body {
 #featuredArtistsList {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin-top: 20px;
     margin-bottom: 50px;
     height: 250px;
@@ -136,7 +137,6 @@ a {
     justify-content: center;
     align-items: center;
     display: flex;
-    flex-wrap: wrap;
     border-radius: 50%;
     top: 0;
     bottom: 0;
