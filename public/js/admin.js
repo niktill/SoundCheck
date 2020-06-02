@@ -111,7 +111,7 @@ function removeUser(e) {
     if (e.target.tagName === 'BUTTON' && e.target.innerText === 'Remove User'){
         // remove user from database
         // get user's id
-        const str = e.target.parentElement.parentElement.children[0].innerText
+        const str = e.target.closest('.card').querySelector('.card-header').innerText;
         
         const id = str.substring(9, str.length)
         // set url
@@ -133,8 +133,8 @@ function removeUser(e) {
                 alert('Could not delete username')
             }
         }).then((json)=>{
-            const list = e.target.parentElement.parentElement.parentElement;
-            return list.parentElement.removeChild(list);
+            const card = e.target.closest('.card');
+            return card.closest('.card-deck').removeChild(card);
         }).catch((error) => {
             console.log(error)
         })
