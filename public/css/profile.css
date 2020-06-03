@@ -31,7 +31,7 @@
 	margin-top: 3vh;
 	margin-bottom: 0;
 	width: 660px;
-	height: 470px;
+	height: 80vh;
 	overflow: auto;
 }
 
@@ -46,7 +46,7 @@
 	margin-top: 3vh;
 	margin-bottom: 0;
 	width: 800px;
-	height: 470px;
+	height: 80vh;
 	overflow: auto;
 	overflow-y: scroll;
 }
