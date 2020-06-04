@@ -26,6 +26,12 @@
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
+.card-deck {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .card .middle {
     position: absolute;
     border-radius: 50%;
@@ -62,7 +68,7 @@
     font-size: 80px;
 }
 
-.card .middle:hover, .card .middlered:hover {
+.card:hover .middle, .card:hover .middlered {
     opacity: 1;
     background-color: rgb(255,255,255,0.7);
     transition: 0.5s ease;
