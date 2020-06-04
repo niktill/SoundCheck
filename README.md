@@ -6,7 +6,7 @@ Original Project Git Repo https://github.com/csc309-winter-2019/team29
 
 ### Description
 
-This website is my improved version of a group project website I had work on for a Web Development course at the University of Toronto.
+This website is my improved version of a group project I had work on for a Web Development course at the University of Toronto.
 
 SoundCheck is a website built with HTML, CSS, JavaScript, Nodejs Express and MongoDB. This website allows its users to create an account, search for similar artists using Spotify's Web API and to save artists they find to check out their music later. On top of this there are additional features users can enjoy such as filtering their saved artists by genre, viewing the most 'checked' artists, changing their account credentials, viewing their own search history, and performing a random serch based of their search history and more! There is also the ability to add admins for this site that can remove users or update their credentials and add or remove featured artists to the homepage of the website.
 
