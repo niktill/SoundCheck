@@ -142,7 +142,7 @@ a {
 }
 
 
-.container .middle:hover {
+.container:hover .middle {
     opacity: 1;
     transition: 0.5s ease;
 }
