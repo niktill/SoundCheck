@@ -30,7 +30,7 @@
     "nodemon": "^2.0.4",
     "react-bootstrap": "^1.0.1",
     "request": "^2.88.0",
-    "validator": "^10.11.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {},
   "keywords": []
